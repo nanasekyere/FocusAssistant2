@@ -10,22 +10,24 @@ import SwiftData
 
 struct TabBar: View {
     var body: some View {
-        if #available(iOS 26.0, *) {
-            TabView {
-                TodayView(viewModel: TodayViewModel())
-                    .tabItem {
-                        Label("Today", systemImage: "sun.max")
-                    }
-                
-                TasksView(viewModel: TasksViewModel())
-                    .tabItem {
-                        Label("Tasks", systemImage: "checklist")
-                    }
-                
-                SettingsView(viewModel: SettingsViewModel())
-                    .tabItem {
-                        Label("Settings", systemImage: "gearshape")
-                    }
+        OTPKit("user_log_Status") {
+            if #available(iOS 26.0, *) {
+                TabView {
+                    TodayView(viewModel: TodayViewModel())
+                        .tabItem {
+                            Label("Today", systemImage: "sun.max")
+                        }
+                    
+                    TasksView(viewModel: TasksViewModel())
+                        .tabItem {
+                            Label("Tasks", systemImage: "checklist")
+                        }
+                    
+                    SettingsView(viewModel: SettingsViewModel())
+                        .tabItem {
+                            Label("Settings", systemImage: "gearshape")
+                        }
+                }
             }
         }
     }
