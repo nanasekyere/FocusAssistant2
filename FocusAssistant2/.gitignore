@@ -148,3 +148,7 @@ AuthKey_*.p8
 # Temporary files
 *.tmp
 *.temp
+
+# Google Services Configuration Files
+GoogleService-Info.plist
+google-services.json
