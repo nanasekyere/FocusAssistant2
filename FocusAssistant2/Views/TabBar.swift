@@ -11,7 +11,7 @@ import SwiftData
 struct TabBar: View {
     var body: some View {
         OTPKit("user_log_Status") {
-            if #available(iOS 26.0, *) {
+            if isiOS26 {
                 TabView {
                     TodayView(viewModel: TodayViewModel())
                         .tabItem {
